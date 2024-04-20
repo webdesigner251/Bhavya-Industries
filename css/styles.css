@@ -30,7 +30,7 @@ body {
 }
 
 p {
-    font-family: "Jost", sans-serif; 
+    font-family: "Jost", sans-serif;
 }
 
 
@@ -52,7 +52,7 @@ header {
 }
 
 .navbar .nav-item {
-    margin: 0px 10px;
+    margin: 0px 20px;
 }
 
 .navbar .nav-item .nav-link {
@@ -60,6 +60,29 @@ header {
     font-weight: 600;
     color: var(--black);
     text-transform: uppercase;
+    transition: 0.3s all;
+    position: relative;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.navbar .nav-item .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--PrimaryColor);
+    left: 0px;
+    bottom: 0;
+    transition: 0.3s all;
+}
+
+.navbar .nav-item .nav-link:hover {
+    color: var(--PrimaryColor);
+}
+
+.navbar .nav-item .nav-link:hover::before {
+    width: 100%;
 }
 
 .navbar .nav-item .nav-link.active {
@@ -105,7 +128,7 @@ header {
     background-color: #fff;
     -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
     -o-transition: all .3s cubic-bezier(.645, .045, .355, 1);
-    transition: all .3s cubic-bezier(.645, .045, .355, 1);    
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
     text-transform: uppercase;
 }
 
@@ -225,7 +248,6 @@ header {
 /* Banner Ends */
 
 /* About us section Starts */
-<<<<<<< HEAD
 .about-section {
     padding: 100px 0;
 }
@@ -237,7 +259,7 @@ header {
 
 .sub-title-color {
     color: #1E3489;
-=======
+}
 
 .about-wrapper {
     padding: 100px 0px;
@@ -249,7 +271,7 @@ header {
     color: var(--PrimaryColor);
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 14px !important;
     letter-spacing: 2.2px;
     padding-left: 40px;
     margin-top: 10px;
@@ -298,12 +320,10 @@ header {
 
 .img-design img {
     box-shadow: 3px 9px 9px 0px #0000001f;
->>>>>>> a5ee76746a58604aa4080c748181ff52cb9d63c2
 }
 
 /* About us Section Ends */
 
-<<<<<<< HEAD
 /* ==================================================================
 about us page css start
 ===================================================================== */
@@ -411,7 +431,6 @@ footer a {
 /* ================================================
 footer
 =================================================== */
-=======
 /* Our products Section starts */
 
 .our-products {
@@ -425,7 +444,7 @@ footer
     height: 100%;
 }
 
-.pro-wrapper .img-wrapper{
+.pro-wrapper .img-wrapper {
     border: 1px solid #f5f5f5;
     height: 350px;
     overflow: hidden;
@@ -478,7 +497,7 @@ footer
     z-index: 1;
 }
 
-.cta-wrapper::before { 
+.cta-wrapper::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -518,20 +537,188 @@ footer
 
 /* Home page Responsive Starts */
 
+@media (max-width: 1200px) {
+    .title {
+        font-size: 59px;
+    }
+}
+
 @media (max-width: 992px) {
     .navbar-toggler {
         border: 2px solid var(--PrimaryColor);
-        border-radius: 0px ;
+        border-radius: 0px;
         box-shadow: none !important;
         transition: 0.3s all;
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 64 64" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M4.59 59.41a2 2 0 0 0 2.83 0L32 34.83l24.59 24.58a2 2 0 0 0 2.83-2.83L34.83 32 59.41 7.41a2 2 0 0 0-2.83-2.83L32 29.17 7.41 4.59a2 2 0 0 0-2.82 2.82L29.17 32 4.59 56.59a2 2 0 0 0 0 2.82z" fill="%23000000" opacity="1" data-original="%23000000"></path></g></svg>');
+        background-size: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .navbar-toggler:hover {
+        background-color: var(--PrimaryColor);
+    }
+
+    .navbar .nav-item {
+        margin: 0px 0px;
+    }
+
+    .about-wrapper,
+    .cta-wrapper {
+        padding: 70px 0px;
+    }
+
+    .second-title,
+    .cta-heading {
+        font-size: 38px;
+    }
+
+    .para-text {
+        max-width: 100%;
+    }
+
+    .cta-para {
+        font-size: 18px;
     }
 }
 
 @media (max-width: 767px) {
+
+    .hero-banner {
+        min-height: 70vh;
+        padding: 70px 12px;
+    }
+
     .title {
-        font-size: 8vw;
+        font-size: 46px;
+    }
+
+    .second-title,
+    .cta-heading {
+        font-size: 35px;
+    }
+
+    .about-wrapper,
+    .cta-wrapper,
+    .our-products {
+        padding: 40px 0px;
+    }
+
+    .pro-wrapper .img-wrapper {
+        height: 220px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .navbar .nav-item .nav-link {
+        font-size: 14px;
+        padding: 5px 0px;
+    }
+
+    .hero-banner {
+        min-height: 100%;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .para {
+        line-height: normal;
+    }
+
+    .second-title,
+    .cta-heading {
+        font-size: 30px;
+    }
+
+    .img-design {
+        width: 96%;
+    }
+
+    .pro-wrapper .img-wrapper {
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 36px;
+    }
+
+    .second-title, .cta-heading {
+        font-size: 28px;
+    }
+
+    .pro-wrapper .heading-wrapper .heading {
+        font-size: 18px;
     }
 }
 
 /* Home page Responsive Ends */
->>>>>>> a5ee76746a58604aa4080c748181ff52cb9d63c2
+
+
+
+
+/* Contact us page Starts */
+
+.banner-small {
+    min-height: 100%; 
+}
+
+.contact-wrapper {
+    padding: 100px 0px;
+}
+
+.info-widget .info-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--BlackShade);
+}
+
+.info-widget p {
+    max-width: 350px;
+    line-height: normal;
+}
+
+.info-widget a {
+    display: block;
+    text-decoration: none;
+    color: var(--BlackShade);
+    opacity: 0.8;
+    line-height: 30px;
+    transition: 0.3s all;
+    font-weight: 400;
+}
+
+.info-widget a:hover {
+    color: var(--PrimaryColor);
+    opacity: 1;
+}
+
+.map-wrapper {
+    box-shadow: 3px 8px 10px 2px #00000017;
+    height: 450px;
+}
+
+.form-wrapper {
+    margin: 50px 0px;
+    box-shadow: 3px 8px 10px 2px #00000017;
+    padding: 30px;
+}
+
+.form-wrapper .form-control {
+    border-radius: 0px !important;
+    height: 46px;
+}
+
+
+/* Contact us Page Ends */
