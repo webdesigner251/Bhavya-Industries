@@ -29,8 +29,18 @@ body {
     --white: #FFF;
 }
 
+p {
+    font-family: "Jost", sans-serif; 
+}
+
 
 /* Header Starts */
+
+header {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
 
 .navbar-brand {
     max-width: 150px;
@@ -68,6 +78,7 @@ body {
     text-shadow: 0 0 1px rgba(255, 255, 255, .3);
     white-space: nowrap;
     font-family: "Jost", sans-serif;
+    text-transform: uppercase;
 }
 
 .button::before {
@@ -85,6 +96,7 @@ body {
     -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
     -o-transition: all .3s cubic-bezier(.645, .045, .355, 1);
     transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    text-transform: uppercase;
 }
 
 .button span {
@@ -93,7 +105,8 @@ body {
     background-color: #fff;
     -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
     -o-transition: all .3s cubic-bezier(.645, .045, .355, 1);
-    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);    
+    text-transform: uppercase;
 }
 
 .button:hover span {
@@ -163,7 +176,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #aaaaaa;
+    background-color: #000000c2;
     opacity: 0.7;
     z-index: -1;
     top: 0;
@@ -171,13 +184,15 @@ body {
 }
 
 .title {
-    font-size: 55px;
-    font-weight: 700;
+    font-size: 65px;
+    font-weight: 800;
+    color: #FFF;
 }
 
 .title span {
     position: relative;
     padding: 0px 15px;
+    display: inline-block;
 }
 
 .title span::before {
@@ -190,26 +205,209 @@ body {
     z-index: -1;
     transform: skewX(10deg);
     left: 0px;
+    right: 0;
 }
 
 .para {
-    color: #000;
-    font-size: 20px;
+    color: #FFF;
+    font-size: 18px;
     font-weight: 500;
     max-width: 550px;
-    margin: 20px auto 20px;
+    margin: 0px auto 30px;
 }
 
 .hero-banner .hr-bottom {
-    margin: 0px auto;
-    filter: brightness(0);
+    margin: 25px auto;
+    filter: brightness(5);
     opacity: 1;
 }
 
 /* Banner Ends */
 
 /* About us section Starts */
-.sub-title {
-    
+
+.about-wrapper {
+    padding: 100px 0px;
 }
+
+.sub-title {
+    position: relative;
+    display: inline-block;
+    color: var(--PrimaryColor);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 2.2px;
+    padding-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sub-title::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: var(--PrimaryColor);
+    top: 50%;
+    transform: translate(0%, -50%);
+    left: 0px;
+}
+
+.second-title {
+    font-weight: 700;
+    font-size: 45px;
+    color: var(--BlackShade);
+}
+
+.para-text {
+    font-size: 18px;
+    max-width: 570px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #a3a3a3;
+}
+
+.img-design {
+    position: relative;
+}
+
+.img-design::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--PrimaryColor);
+    bottom: -20px;
+    right: -20px;
+    z-index: -1;
+}
+
+.img-design img {
+    box-shadow: 3px 9px 9px 0px #0000001f;
+}
+
 /* About us Section Ends */
+
+/* Our products Section starts */
+
+.our-products {
+    padding: 70px 0px;
+}
+
+.pro-wrapper {
+    background-color: #007cbe1f;
+    padding: 14px;
+    transition: 0.3s all ease-in-out;
+    height: 100%;
+}
+
+.pro-wrapper .img-wrapper{
+    border: 1px solid #f5f5f5;
+    height: 350px;
+    overflow: hidden;
+    transition: 0.3s all ease-in-out;
+}
+
+.pro-wrapper .img-wrapper img {
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s all ease;
+}
+
+.pro-wrapper .heading-wrapper {
+    padding: 15px 0px;
+}
+
+.pro-wrapper .heading-wrapper .heading {
+    font-size: 20px;
+    color: var(--PrimaryColor);
+    font-weight: 700;
+}
+
+.pro-wrapper .heading-wrapper .text {
+    font-size: 16px;
+    line-height: 23px;
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    color: #00000082;
+    margin-bottom: 0px;
+}
+
+.pro-wrapper:hover .img-wrapper img {
+    transform: scale(1.07);
+    transition: 0.3s all ease-in-out;
+}
+
+/* Our products Section Ends */
+
+/* cta-wrapper Starts */
+
+.cta-wrapper {
+    background: url('../images/silhouette-team-engineers-construction-site-sunset-generative.png') no-repeat;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 120px 0px;
+    margin: 0px 0px;
+    position: relative;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+.cta-wrapper::before { 
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000a3;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.cta-wrapper .hr-bottom {
+    opacity: 0.8;
+    filter: brightness(5);
+}
+
+.cta-heading {
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.cta-para {
+    font-size: 20px;
+    line-height: 23px;
+    font-family: "Jost", sans-serif;
+    font-weight: 300;
+    color: #FFF;
+    max-width: 440px;
+    display: block;
+}
+
+/* cta-wrapper Ends */
+
+
+
+/* Home page Responsive Starts */
+
+@media (max-width: 992px) {
+    .navbar-toggler {
+        border: 2px solid var(--PrimaryColor);
+        border-radius: 0px ;
+        box-shadow: none !important;
+        transition: 0.3s all;
+    }
+}
+
+@media (max-width: 767px) {
+    .title {
+        font-size: 8vw;
+    }
+}
+
+/* Home page Responsive Ends */
