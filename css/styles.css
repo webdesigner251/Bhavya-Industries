@@ -248,7 +248,7 @@ header {
 /* Banner Ends */
 
 /* About us section Starts */
-<<<<<<< HEAD .about-section {
+.about-section {
     padding: 100px 0;
 }
 
@@ -338,6 +338,9 @@ about us page css start
 
 .breadcrumb-page {
     font-size: 18px;
+    color: white;
+    font-weight: 700;
+
 }
 
 
@@ -469,7 +472,6 @@ a {
 /* ================================================
 footer end
 =================================================== */
-=======
 /* Our products Section starts */
 
 .our-products {
@@ -574,7 +576,7 @@ footer end
 
 
 
-/* Home page Responsive Starts */
+/* / Home page Responsive Starts / */
 
 @media (max-width: 1200px) {
     .title {
@@ -703,5 +705,62 @@ footer end
     }
 }
 
-/* Home page Responsive Ends */
->>>>>>>a5ee76746a58604aa4080c748181ff52cb9d63c2
+/* / Home page Responsive Ends /' */
+
+
+
+
+/* / Contact us page Starts / */
+
+.banner-small {
+    min-height: 100%;
+}
+
+.contact-wrapper {
+    padding: 100px 0px;
+}
+
+.info-widget .info-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--BlackShade);
+}
+
+.info-widget p {
+    max-width: 350px;
+    line-height: normal;
+}
+
+.info-widget a {
+    display: block;
+    text-decoration: none;
+    color: var(--BlackShade);
+    opacity: 0.8;
+    line-height: 30px;
+    transition: 0.3s all;
+    font-weight: 400;
+}
+
+.info-widget a:hover {
+    color: var(--PrimaryColor);
+    opacity: 1;
+}
+
+.map-wrapper {
+    box-shadow: 3px 8px 10px 2px #00000017;
+    height: 450px;
+}
+
+.form-wrapper {
+    margin: 50px 0px;
+    box-shadow: 3px 8px 10px 2px #00000017;
+    padding: 30px;
+}
+
+.form-wrapper .form-control {
+    border-radius: 0px !important;
+    height: 46px;
+}
+
+
+/* / Contact us Page Ends / */
