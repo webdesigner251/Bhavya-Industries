@@ -30,7 +30,7 @@ body {
 }
 
 p {
-    font-family: "Jost", sans-serif; 
+    font-family: "Jost", sans-serif;
 }
 
 
@@ -105,7 +105,7 @@ header {
     background-color: #fff;
     -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
     -o-transition: all .3s cubic-bezier(.645, .045, .355, 1);
-    transition: all .3s cubic-bezier(.645, .045, .355, 1);    
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
     text-transform: uppercase;
 }
 
@@ -225,8 +225,7 @@ header {
 /* Banner Ends */
 
 /* About us section Starts */
-<<<<<<< HEAD
-.about-section {
+HEAD .about-section {
     padding: 100px 0;
 }
 
@@ -237,7 +236,7 @@ header {
 
 .sub-title-color {
     color: #1E3489;
-=======
+}
 
 .about-wrapper {
     padding: 100px 0px;
@@ -298,63 +297,48 @@ header {
 
 .img-design img {
     box-shadow: 3px 9px 9px 0px #0000001f;
->>>>>>> a5ee76746a58604aa4080c748181ff52cb9d63c2
 }
 
 /* About us Section Ends */
 
-<<<<<<< HEAD
 /* ==================================================================
 about us page css start
 ===================================================================== */
 
 /* banner section  */
-.abour-us-page .hero-banner-about-page {
+.hero-banner-about-page {
     /* padding: 50px 0; */
     min-height: 10vh;
 }
 
 /* banner  section end */
 
-.about-title {
-    font-size: 50px;
+.breadcrumb-page {
+    font-size: 18px;
 }
 
-.img-div {
-    max-width: 700px;
-    height: auto;
+
+/* ==================================================================
+about us page css end
+======================================================================= */
+
+/* ===========================================================
+footere
+=============================================================  */
+
+
+a {
+    text-decoration: none !important;
 }
 
-.img-div img {
-    width: 100%;
-    height: 100%;
+a {
+    text-decoration: none !important;
 }
 
-.about-section {
-    padding: 100px 0;
+.footer-text {
+    font-size: 18px;
 }
 
-.sub-title {
-    font-size: 35px;
-    font-weight: 700;
-}
-
-.sub-title-color {
-    color: #1E3489;
-}
-
-.text-lorem {
-    color: #000;
-    font-size: 20px;
-    font-weight: 500;
-    margin: 20px auto 20px;
-}
-
-.abour-us-page .about-section .btn-bg-color span {
-    background-color: #1E3489;
-}
-
-/* footer strat */
 .com-logo-img {
     max-width: 150px;
     height: auto;
@@ -365,30 +349,10 @@ about us page css start
     height: 100%;
 }
 
-.footer-text {
-    font-size: 16px;
-    font-weight: 500;
-
-}
-
-/* footer end  */
-
-
-/* ==================================================================
-about us page css end
-======================================================================= */
-
-/* ===========================================================
-footere
-=============================================================  */
-footer a {
-    text-decoration: none !important;
-
-}
-
 .footer {
     background-color: #000;
-    padding: 100px 0;
+    padding: 100px 10px 50px 10px;
+    margin-top: 100px;
 
 }
 
@@ -404,14 +368,86 @@ footer a {
 }
 
 .social-media-link {
-    border-bottom: 1px solid #0294DF;
+    border-top: 1px solid #0294DF;
     margin-top: 100px;
+    padding: 50px 0 0 0;
 }
 
+.social-media li {
+    list-style: none;
+}
+
+.social-media li a {
+    margin-right: 30px;
+
+}
+
+.social-media li a i {
+    border: 1px solid white;
+    border-radius: 100%;
+    padding: 15px;
+    background-color: #0294DF;
+}
+
+@media(max-width:1200px) {
+    .footer {
+        padding: 80px 0;
+        margin-top: 80px;
+    }
+
+    .social-media-link {
+        margin-top: 20px;
+    }
+}
+
+@media(max-width:992px) {
+    .footer {
+        padding: 80px 0;
+        margin-top: 50px;
+    }
+
+    .social-media-link {
+        margin-top: 20px;
+    }
+
+
+
+}
+
+
+
+@media(max-width:768px) {
+    .footer {
+        padding: 30px 0;
+    }
+
+    .social-media li a i {
+        padding: 10px;
+    }
+
+    .social-media {
+        justify-content: center !important;
+    }
+
+    .social-media-link p {
+        text-align: center;
+
+    }
+}
+
+@media(max-width:576px) {
+    .footer {
+        padding: 30px 0;
+    }
+}
+
+@media(max-width:480px) {}
+
 /* ================================================
-footer
+footer end
 =================================================== */
-=======
+
+
 /* Our products Section starts */
 
 .our-products {
@@ -425,7 +461,7 @@ footer
     height: 100%;
 }
 
-.pro-wrapper .img-wrapper{
+.pro-wrapper .img-wrapper {
     border: 1px solid #f5f5f5;
     height: 350px;
     overflow: hidden;
@@ -478,7 +514,7 @@ footer
     z-index: 1;
 }
 
-.cta-wrapper::before { 
+.cta-wrapper::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -521,7 +557,7 @@ footer
 @media (max-width: 992px) {
     .navbar-toggler {
         border: 2px solid var(--PrimaryColor);
-        border-radius: 0px ;
+        border-radius: 0px;
         box-shadow: none !important;
         transition: 0.3s all;
     }
@@ -534,4 +570,3 @@ footer
 }
 
 /* Home page Responsive Ends */
->>>>>>> a5ee76746a58604aa4080c748181ff52cb9d63c2
